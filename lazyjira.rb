@@ -5,20 +5,20 @@
 class Lazyjira < Formula
   desc ""
   homepage "https://github.com/SpyMachine/lazyjira"
-  version "0.0.1-5"
+  version "0.0.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/SpyMachine/lazyjira/releases/download/v0.0.1-5/lazyjira_Darwin_arm64.tar.gz"
-      sha256 "9b16a65bf1c2b51ab59a1a0a5c1deb9a59bf6626fcc1a25043fe380673f81feb"
+    if Hardware::CPU.intel?
+      url "https://github.com/SpyMachine/lazyjira/releases/download/v0.0.1/lazyjira_Darwin_x86_64.tar.gz"
+      sha256 "77a9956ef8066dfee10cf58cddc48784aa499b59d240ccba0b14d67f5557ffc2"
 
       def install
         bin.install "lazyjira"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/SpyMachine/lazyjira/releases/download/v0.0.1-5/lazyjira_Darwin_x86_64.tar.gz"
-      sha256 "80834800f67f3f186ab21aff0ce41e4a4a28538fa86cd519f486d73e6a5d6ba2"
+    if Hardware::CPU.arm?
+      url "https://github.com/SpyMachine/lazyjira/releases/download/v0.0.1/lazyjira_Darwin_arm64.tar.gz"
+      sha256 "4ee1cf92fe975da779ad60a92501f333bff7505b7cf953bc3612c2e61048e665"
 
       def install
         bin.install "lazyjira"
@@ -28,16 +28,16 @@ class Lazyjira < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SpyMachine/lazyjira/releases/download/v0.0.1-5/lazyjira_Linux_arm64.tar.gz"
-      sha256 "eca5d79b295f0e941dfd6bce956386dfd6f3776e31a4b602bcf70c2809984d2c"
+      url "https://github.com/SpyMachine/lazyjira/releases/download/v0.0.1/lazyjira_Linux_arm64.tar.gz"
+      sha256 "9e55d515c92086f064104aa984005bb0e6757fa4757c7b10b7b291b6e1bcf8e2"
 
       def install
         bin.install "lazyjira"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/SpyMachine/lazyjira/releases/download/v0.0.1-5/lazyjira_Linux_x86_64.tar.gz"
-      sha256 "3af5d45a0536c90c2bba000183b8108eac26df02a6a25d9ebcd1e82640b60602"
+      url "https://github.com/SpyMachine/lazyjira/releases/download/v0.0.1/lazyjira_Linux_x86_64.tar.gz"
+      sha256 "f3916e2cf5321b058159b0fda09b9c2f539aa3f9f1f32294dbb656e099ffa9a3"
 
       def install
         bin.install "lazyjira"
